@@ -12,7 +12,7 @@ from pcntoolkit.regression_model.blr.blr_conf import BLRConf
 from pcntoolkit.normative_model.norm_blr import NormBLR
 import shutil
 
-resources_dir = "/home/preclineu/stijdboe/workingdir/Projects/Crash-course/resources"
+resources_dir = "/Users/stijndeboer/Projects/PCN/Crash_Course/resources"
 abs_path = os.path.abspath(resources_dir)
 data_dir = os.path.join(abs_path, "data")
 os.makedirs(data_dir, exist_ok=True)
@@ -74,7 +74,7 @@ os.makedirs(sandbox_dir, exist_ok=True)
 
 
 runner = Runner(
-    cross_validate=False,
+    cross_validate=True,
     cv_folds=3,
     parallelize=True,
     time_limit="00:10:00",
